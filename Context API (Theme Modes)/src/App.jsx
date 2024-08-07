@@ -1,21 +1,21 @@
-import React from "react";
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import ToggleButton from "./ToggleButton";
-
-const Home = () => {
+import { useTheme } from "./Contexts/ThemeContext";
+function App() {
+  const { dark } = useTheme();
   return (
     <>
-      <div className="h-screen bg-stone-900 ">
-        <div className="text-center  pt-[90px]   overflow-hidden text-white text-4xl">
-          Home
-        </div>
-        <div className=" text-stone-500 text-md text-center">
-          @Using React-router-Dom
-        </div>
+      <div className=" BODY h-screen w-screen bg-purple-400 dark:bg-stone-700">
         <div className="flex flex-col items-center">
-          {/* <ToggleButton /> */}
-          <div className="w-[500px] p-2 px-6 flex flex-col items-center space-y-5 h-[400px] mx-auto mt-10 bg-white text-black dark:bg-stone-800 rounded-md dark:text-orange-500">
+          <div className=" relative pt-4 w-[500px] p-2 px-6 flex flex-col items-center space-y-5 h-[400px] mx-auto mt-10 bg-white text-black dark:bg-stone-800 rounded-md dark:text-white">
             <h1 className="text-3xl">Theme Mode</h1>
-            <h1 className="">Current Theme: </h1>
+            <div className="absolute top-0  right-8 flex">
+              {" "}
+              <ToggleButton />
+            </div>
+            <h1 className="">{dark ? "Dark Theme" : "Light Theme"} </h1>
             <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reiciendis voluptatem, inventore quae doloribus, debitis sed vitae
@@ -30,6 +30,6 @@ const Home = () => {
       </div>
     </>
   );
-};
+}
 
-export default Home;
+export default App;

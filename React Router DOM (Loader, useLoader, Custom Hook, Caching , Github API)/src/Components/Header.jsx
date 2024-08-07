@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import ToggleButton from "./ToggleButton";
 
 const Header = () => {
   return (
@@ -86,6 +87,10 @@ const Header = () => {
               >
                 github-customHook
               </NavLink>
+            </li>
+            <li className="text-white flex">
+              {" "}
+              <ToggleButton />
             </li>
           </ul>
         </nav>
