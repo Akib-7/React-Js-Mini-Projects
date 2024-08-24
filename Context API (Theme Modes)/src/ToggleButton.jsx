@@ -21,10 +21,10 @@ const ToggleButton = () => {
         className="relative w-[50px] h-[25px] cursor-pointer"
       >
         <input
-          type="checkbox"
           id="theme-toggle"
           onChange={toggle}
           checked={dark}
+          type="checkbox"
           className="sr-only peer"
         />
         <span className="w-full h-full bg-gray-300 peer-checked:bg-stone-900 rounded-full absolute "></span>
